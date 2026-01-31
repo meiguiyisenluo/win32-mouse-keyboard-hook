@@ -1,4 +1,4 @@
-declare module "win32-keyboard-hook" {
+declare module "@lysyyds/win32-mouse-keyboard-hook" {
   export type Callback = (
     type: "key" | "mouse",
     eventType: number,

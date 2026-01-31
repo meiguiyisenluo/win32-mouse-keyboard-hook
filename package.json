@@ -1,33 +1,37 @@
 {
-  "name": "win32-mouse-keyboard-hook",
-  "version": "1.0.0",
+  "name": "@lysyyds/win32-mouse-keyboard-hook",
+  "version": "1.0.9",
   "description": "C++ mouse-keyboard-hook for NodeJS & Electron",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
     "build": "node-gyp rebuild --target=30.0.0 --dist-url=https://electronjs.org/headers",
+    "install": "prebuild-install || echo \"skip node build\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
     "index.js",
     "index.d.ts",
     "build/Release",
-    "package.json"
+    "usage-demo.js",
+    "LICENSE.txt",
+    "README.md"
   ],
   "binary": {
-    "module_name": "input_hook",
+    "module_name": "win32_mouse_keyboard_hook",
     "module_path": "./build/Release/",
-    "host": "https://github.com/你的用户名/你的仓库/releases/download/"
+    "host": "https://github.com/meiguiyisenluo/win32-mouse-keyboard-hook/releases/download/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-addon-api": "^8.5.0"
+    "node-addon-api": "^8.5.0",
+    "prebuild-install": "^7.1.3",
+    "node-gyp-build": "^4.8.4"
   },
   "devDependencies": {
-    "node-gyp": "^12.2.0",
-    "node-gyp-build": "^4.8.4"
+    "node-gyp": "^12.2.0"
   },
   "exports": {
     ".": {
