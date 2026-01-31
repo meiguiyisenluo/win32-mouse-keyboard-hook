@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{13ED4249-1F9C-5F0F-2651-29A73F3A7059}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:">
+      <UniqueIdentifier>{86BBDC71-6ACD-FBEF-2BDD-D703B16582D3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\sourcecode">
+      <UniqueIdentifier>{C1F4CC19-7840-7F73-F8AD-F450C942E77E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\sourcecode\win32-keyboard-hook">
+      <UniqueIdentifier>{07EA3DB5-2ADF-38E7-9CBD-E6B694214FD5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\sourcecode\win32-keyboard-hook\node_modules">
+      <UniqueIdentifier>{126A39EA-1D28-5689-C126-0DA0AB5837A0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\sourcecode\win32-keyboard-hook\node_modules\node-gyp">
+      <UniqueIdentifier>{49558BB4-6D34-CA91-A65D-85A65792DC11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\sourcecode\win32-keyboard-hook\node_modules\node-gyp\src">
+      <UniqueIdentifier>{F1003AD6-4B6D-45DF-3F56-5CAC869BF55E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{13ED4249-1F9C-5F0F-2651-29A73F3A7059}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\keyboard_hook.cc">
+      <Filter>..</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\sourcecode\win32-keyboard-hook\node_modules\node-gyp\src\win_delay_load_hook.cc">
+      <Filter>D:\sourcecode\win32-keyboard-hook\node_modules\node-gyp\src</Filter>
+    </ClCompile>
+    <None Include="..\binding.gyp">
+      <Filter>..</Filter>
+    </None>
+  </ItemGroup>
+</Project>
