@@ -14,6 +14,11 @@
     "build/Release",
     "package.json"
   ],
+  "binary": {
+    "module_name": "input_hook",
+    "module_path": "./build/Release/",
+    "host": "https://github.com/你的用户名/你的仓库/releases/download/"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

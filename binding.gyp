@@ -1,8 +1,8 @@
 {
   "targets": [
     {
-      "target_name": "keyboard_hook",
-      "sources": [ "keyboard_hook.cc" ],
+      "target_name": "win32_mouse_keyboard_hook",
+      "sources": [ "win32_mouse_keyboard_hook.cc" ],
       "include_dirs": [
         "<!(node -p \"require('node-addon-api').include\")",
         "<!(node -p \"require('node-addon-api').include_dir\")"
