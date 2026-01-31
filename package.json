@@ -1,13 +1,19 @@
 {
-  "name": "win32-keyboard-hook",
+  "name": "win32-mouse-keyboard-hook",
   "version": "1.0.0",
-  "description": "",
+  "description": "C++ mouse-keyboard-hook for NodeJS & Electron",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "build": "node-gyp rebuild",
+    "build": "node-gyp rebuild --target=30.0.0 --dist-url=https://electronjs.org/headers",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "build/Release",
+    "package.json"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
