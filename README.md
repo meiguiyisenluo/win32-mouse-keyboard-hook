@@ -126,5 +126,5 @@ D:\sourcecode\win32-keyboard-hook>cl
 D:\sourcecode\win32-keyboard-hook>python --version
 Python 3.14.2
 
-D:\sourcecode\win32-keyboard-hook>npm run build
+D:\sourcecode\win32-keyboard-hook>npm run build-all
 ```
