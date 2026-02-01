@@ -1,12 +1,5 @@
-// const path = require("path");
-// const addon = require(
-//   path.join(__dirname, "build", "Release", "keyboard_hook.node"),
-// );
-
-// module.exports = {
-//   start: addon.start,
-//   stop: addon.stop,
-// };
+// Copyright (c) 2026 YiSen Luo 罗亦森
+// Licensed under the MIT License.
 
 const addon = require("node-gyp-build")(__dirname);
 

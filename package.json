@@ -1,6 +1,6 @@
 {
   "name": "@lysyyds/win32-mouse-keyboard-hook",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "C++ mouse-keyboard-hook for NodeJS & Electron",
   "main": "index.js",
   "types": "index.d.ts",
@@ -28,19 +28,33 @@
     "module_file_name": "win32_mouse_keyboard_hook.node",
     "host": "https://github.com/meiguiyisenluo/win32-mouse-keyboard-hook/releases/download/"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "YiSen Luo",
+  "keywords": [
+    "win32",
+    "windows",
+    "keyboard",
+    "mouse",
+    "hook",
+    "global-hook",
+    "keyboard-hook",
+    "mouse-hook",
+    "native",
+    "native-addon",
+    "node-gyp",
+    "electron",
+    "electron-addon",
+    "system-hook",
+    "low-level"
+  ],
+  "license": "MIT",
   "dependencies": {
     "node-addon-api": "^8.5.0",
     "node-gyp-build": "^4.8.4",
     "prebuild-install": "^7.1.3"
   },
   "devDependencies": {
-    "install": "^0.13.0",
     "node-abi": "^4.26.0",
-    "node-gyp": "^12.2.0",
-    "npm": "^11.8.0"
+    "node-gyp": "^12.2.0"
   },
   "exports": {
     ".": {

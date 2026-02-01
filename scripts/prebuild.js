@@ -1,3 +1,6 @@
+// Copyright (c) 2026 YiSen Luo 罗亦森
+// Licensed under the MIT License.
+
 const ELECTRON_VERSIONS = [
   "22.3.27", // 最后一个支持 Win7 的版本
   "23.3.13",

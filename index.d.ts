@@ -1,3 +1,5 @@
+// Copyright (c) 2026 YiSen Luo 罗亦森
+// Licensed under the MIT License.
 declare module "@lysyyds/win32-mouse-keyboard-hook" {
   export type Callback = (
     type: "key" | "mouse",

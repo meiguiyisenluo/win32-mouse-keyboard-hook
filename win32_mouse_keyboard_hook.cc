@@ -1,3 +1,6 @@
+// Copyright (c) 2026 YiSen Luo 罗亦森
+// Licensed under the MIT License.
+
 #include <napi.h>
 #include <windows.h>
 #include <thread>

@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 YiSen Luo 罗亦森 -->
+<!-- Licensed under the MIT License. -->
+
 ## What's this for
 
 C++ mouse-keyboard-hook for Electron -> Windows
@@ -125,6 +128,8 @@ D:\sourcecode\win32-keyboard-hook>cl
 
 D:\sourcecode\win32-keyboard-hook>python --version
 Python 3.14.2
+
+D:\sourcecode\win32-keyboard-hook>npm i
 
 D:\sourcecode\win32-keyboard-hook>npm run build-all
 ```
