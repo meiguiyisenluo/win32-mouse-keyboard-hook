@@ -3,7 +3,7 @@
 
 ## What's this for
 
-C++ mouse-keyboard-hook for Electron -> Windows
+An NPM library used for Electron to listen to keyboard and mouse events at the Windows system level
 
 supported Electron verion:
 
