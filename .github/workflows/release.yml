@@ -3,7 +3,7 @@ name: Build Native Module
 on:
   push:
     tags:
-      - "V*"
+      - "v*"
 
 jobs:
   build-native:
