@@ -3,6 +3,11 @@
 
 ## What's this for
 
+**需要点赞和工作（前端开发）**
+**邮箱：1402175410@qq.com**
+**need star & job(FE Developer)**
+**email：1402175410@qq.com**
+
 An NPM library used for Electron to listen to keyboard and mouse events at the Windows system level
 
 supported Electron verion:
@@ -69,9 +74,9 @@ const callback: Callback = (type, eventType, x, y) => {
 win32KeyboardHook.start(callback);
 ```
 
-
 types
-``` typescript
+
+```typescript
 declare module "@lysyyds/win32-mouse-keyboard-hook" {
   export type Callback = (
     type: "key" | "mouse",
@@ -99,7 +104,6 @@ declare module "@lysyyds/win32-mouse-keyboard-hook" {
     Wheel = 6,
   }
 }
-
 ```
 
 ## Build yourself
