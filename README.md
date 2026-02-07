@@ -3,10 +3,10 @@
 
 ## What's this for
 
-**需要点赞和工作（前端开发）**
-**邮箱：1402175410@qq.com**
-**need star & job(FE Developer)**
-**email：1402175410@qq.com**
+**需要点赞和工作（前端开发）**  
+**邮箱：1402175410@qq.com**  
+**need star & job(FE Developer)**  
+**email：1402175410@qq.com**  
 
 An NPM library used for Electron to listen to keyboard and mouse events at the Windows system level
 
