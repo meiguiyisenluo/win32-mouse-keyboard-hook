@@ -5,11 +5,29 @@ const hook = require(".");
 
 hook.start((type, eventType, x, y) => {
   if (type === "key") {
-    console.log("Key:", eventType, x, y);
+    console.log("key:", eventType, x, y);
   } else if (type === "mouse") {
-    console.log("Mouse:", eventType, x, y);
+    console.log("mouse:", eventType, x, y);
   }
 });
 
+hook.on("key", (eventType, x, y) => {
+  console.log("key1:", eventType, x, y);
+});
+
+hook.on("key", (eventType, x, y) => {
+  console.log("key2:", eventType, x, y);
+});
+
+hook.on("mouse", (eventType, x, y) => {
+  console.log("mouse1:", eventType, x, y);
+});
+
+hook.on("mouse", (eventType, x, y) => {
+  console.log("mouse2:", eventType, x, y);
+});
+
 console.log("Hook started");
-setInterval(() => {}, 1000);
+setInterval(() => {
+  hook.stop();
+}, 10000);

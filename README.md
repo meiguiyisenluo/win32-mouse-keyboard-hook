@@ -6,13 +6,13 @@
 **需要点赞和工作（前端开发）**  
 **邮箱：1402175410@qq.com**  
 **need star & job(FE Developer)**  
-**email：1402175410@qq.com**  
+**email：1402175410@qq.com**
 
-An NPM library used for Electron to listen to keyboard and mouse events at the Windows system level
+An NPM library used for Node.js/Electron to listen to keyboard and mouse events at the Windows system level.
 
 supported Electron verion:
 
-- "22.3.27", // 最后一个支持 Win7 的版本
+- "22.3.27", // last LTS Win7 version
 - "23.3.13",
 - "24.8.3",
 - "25.9.0",
@@ -31,17 +31,66 @@ supported Electron verion:
 npm i @lysyyds/win32-mouse-keyboard-hook
 ```
 
-### use
+### import
 
 ```typescript
-// import
+// createRequire in Vite-Electron
+const require = createRequire(import.meta.url);
+// require
 const win32KeyboardHook = require("@lysyyds/win32-mouse-keyboard-hook");
-// or
+// or import
 // import win32KeyboardHook from "@lysyyds/win32-mouse-keyboard-hook";
 
 // import types
-import type { Callback } from "@lysyyds/win32-mouse-keyboard-hook";
+import type {
+  Callback,
+  KeyboardEventType,
+  MouseEventType,
+} from "@lysyyds/win32-mouse-keyboard-hook";
+```
 
+### usage
+
+### add listener using Nodejs EventEmitter(recommend)
+
+```typescript
+win32KeyboardHook.start();
+// keyboard event
+hook.on("key", (eventType, x, y) => {
+  if (eventType == KeyboardEventType.KeyDown) {
+    // keydown
+    x; // keycode
+  } else if (eventType == KeyboardEventType.KeyUp) {
+    // keyup
+    x; // keycode
+  }
+});
+
+// mouse event
+hook.on("mouse", (eventType, x, y) => {
+  x; // mouse position x
+  y; // mouse position y
+
+  if (eventType == MouseEventType.LeftDown) {
+    // mouse left button down
+  } else if (eventType == MouseEventType.LeftUp) {
+    // mouse left button up
+  } else if (eventType == MouseEventType.RightDown) {
+    // mouse right button down
+  } else if (eventType == MouseEventType.RightUp) {
+    // mouse right button up
+  } else if (eventType == MouseEventType.Wheel) {
+    // wheel active
+  }
+});
+
+// when you need to stop
+win32KeyboardHook.stop();
+```
+
+### add listener at initial
+
+```typescript
 const callback: Callback = (type, eventType, x, y) => {
   const [type, eventType, x, y] = args;
   if (type === "key") {
@@ -78,17 +127,7 @@ types
 
 ```typescript
 declare module "@lysyyds/win32-mouse-keyboard-hook" {
-  export type Callback = (
-    type: "key" | "mouse",
-    eventType: number,
-    x: number,
-    y: number,
-  ) => void;
-
-  export type CallbackArgs = Parameters<Callback>;
-
-  export function start(callback: Callback): void;
-  export function stop(): void;
+  export type EventType = "key" | "mouse";
 
   export enum KeyboardEventType {
     KeyDown = 1,
@@ -103,6 +142,37 @@ declare module "@lysyyds/win32-mouse-keyboard-hook" {
     RightUp = 5,
     Wheel = 6,
   }
+
+  export type Callback = (
+    type: EventType,
+    eventType: number,
+    x: number,
+    y: number,
+  ) => void;
+
+  export type CallbackArgs = Parameters<Callback>;
+
+  export function start(callback?: Callback): void;
+  export function stop(): void;
+
+  export type KeyCodeType = number;
+  export type KeyboardEventCallback = (
+    type: "key",
+    eventType: KeyboardEventType,
+    x: KeyCodeType,
+  ) => void;
+  export type MousePosXType = number;
+  export type MousePosYType = number;
+  export type MouseEventCallback = (
+    type: "mouse",
+    eventType: MouseEventType,
+    x: MousePosXType,
+    y: MousePosYType,
+  ) => void;
+  export type EventEmitterHandler = MouseEventCallback | KeyboardEventCallback;
+  
+  export function on(eventType: EventEmitterHandler): void;
+  export function off(eventType: EventEmitterHandler): void;
 }
 ```
 
