@@ -184,7 +184,7 @@ export default _default;
 
 ## Build yourself
 
-Before starting, please configure the development environment: desktop development using C++/Windows 10/11 SDK/Python 3, and then run `npm run build`
+Before starting, please configure the development environment: desktop development using C++/Windows 10/11 SDK/Python 3, and then run `npm run build-all`
 
 ```
 **********************************************************************

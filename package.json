@@ -18,6 +18,7 @@
     "index.d.ts",
     "build/Release",
     "usage-demo.js",
+    "usage-demo.ts",
     "LICENSE.txt",
     "README.md"
   ],
