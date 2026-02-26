@@ -1,6 +1,6 @@
 {
   "name": "@lysyyds/win32-mouse-keyboard-hook",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "An NPM library used for Node.js/Electron to listen to keyboard and mouse events at the Windows system level",
   "main": "index.js",
   "types": "index.d.ts",
