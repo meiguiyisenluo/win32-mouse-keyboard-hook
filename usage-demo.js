@@ -30,4 +30,4 @@ hook.on("mouse", (eventType, x, y) => {
 console.log("Hook started");
 setInterval(() => {
   hook.stop();
-}, 10000);
+}, 100000);
